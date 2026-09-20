@@ -9,6 +9,8 @@ export type ProductCategory =
   | 'HOME'
   | 'BOOKS'
 
+export type SortDirection = 'ASC' | 'DESC'
+
 export interface Product {
   readonly id: string
   readonly sku: string
@@ -20,4 +22,16 @@ export interface Product {
   category: ProductCategory
   readonly createdAt: string
   updatedAt: string
+}
+
+export type ProductUpdate = Pick<
+  Product,
+  'name' | 'description' | 'price' | 'status' | 'category'
+>
+
+export interface ProductStatistics {
+  totalProducts: number
+  activeProducts: number
+  outOfStockProducts: number
+  totalInventoryValue: number
 }
