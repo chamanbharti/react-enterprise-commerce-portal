@@ -35,3 +35,9 @@ export interface ProductStatistics {
   outOfStockProducts: number
   totalInventoryValue: number
 }
+
+export interface ProductDashboardData {
+  products: Product[]
+  electronics: Product[]
+  books: Product[]
+}
