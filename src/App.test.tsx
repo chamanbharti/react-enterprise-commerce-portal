@@ -13,4 +13,30 @@ describe('App', () => {
       }),
     ).toBeInTheDocument()
   })
+
+  it('renders the product catalog', () => {
+    render(<App />)
+
+    expect(
+      screen.getByRole('heading', {
+        name: /product catalog/i,
+      }),
+    ).toBeInTheDocument()
+  })
+
+  it('renders products from the catalog', () => {
+    render(<App />)
+
+    expect(
+      screen.getByRole('heading', {
+        name: 'MacBook Pro 14',
+      }),
+    ).toBeInTheDocument()
+
+    expect(
+      screen.getByRole('heading', {
+        name: 'Sony WH-1000XM6',
+      }),
+    ).toBeInTheDocument()
+  })
 })

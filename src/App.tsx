@@ -1,24 +1,28 @@
 import './App.css'
+import { ProductCatalog } from './features/products/components/ProductCatalog'
+import { products } from './features/products/data/products'
 
 function App() {
 
   return (
     <main>
-      <section>
-        <h1>Enterprise Commerce & Operations Portal</h1>
-
-        <p>
+      <header>
+        <h1>
+          Enterprise Commerce & Operations Portal
+        </h1>
+         <p>
           Internal operations management platform
         </p>
-
         <p>
           Environment: Local Development
         </p>
+      </header>
 
-        <footer>
-          React + TypeScript
-        </footer>
-      </section>
+      <ProductCatalog products={products}></ProductCatalog>
+
+       <footer>
+        <p>React + TypeScript</p>
+      </footer>
     </main>
   )
 }
